@@ -1,0 +1,36 @@
+{
+  "name": "webpack-dev-starter",
+  "version": "1.0.0",
+  "description": "quick starter for demo etc.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/towry/wds.git"
+  },
+  "keywords": [
+    "webpack"
+  ],
+  "author": "Towry Wang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/towry/wds/issues"
+  },
+  "homepage": "https://github.com/towry/wds#readme",
+  "devDependencies": {
+    "babel-core": "^6.9.1",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "css-loader": "^0.23.1",
+    "html-webpack-plugin": "^2.19.0",
+    "node-sass": "^3.7.0",
+    "sass-loader": "^3.2.0",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
+  },
+  "port": 9001
+}
