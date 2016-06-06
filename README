@@ -1,0 +1,24 @@
+
+									           W D S
+ -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -
+
+ Webpack Dev Server Start, with hot reload enabled.
+
+Usage
+=======
+
+command:
+
+ git clone https://github.com/towry/wds.git && cd wds && npm install && make
+
+
+License
+========
+
+Released under MIT License. 
+
+
+Author
+========
+
+Towry Wang (http://towry.me)
