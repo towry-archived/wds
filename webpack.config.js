@@ -1,24 +1,18 @@
 const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
-const pkg = require('./package.json');
 
 module.exports = {
+	devtool: 'cheap-module-eval-source-map',
+	
 	entry: [
-		'webpack-dev-server/client?http://localhost:' + pkg.port,
-		'webpack/hot/only-dev-server',
+		'webpack-hot-middleware/client',
 		'./sandbox/app.js'
 	],
+
 	output: {
 		path: path.join(__dirname, 'sandbox'),
 		filename: 'bundle.js',
 		publicPath: '/static/'
-	},
-
-	devServer: {
-		contentBase: path.join(__dirname, './sandbox'),
-		hot: true,
-		inline: true
 	},
 
 	module: {
@@ -34,6 +28,7 @@ module.exports = {
 			{
 				test: /\.js$/,
 				exclude: /(node_modules|bower_components)/,
+				include: __dirname + '/src',
 				loader: 'babel',
 				query: {
 					presets: ['es2015']
@@ -49,9 +44,7 @@ module.exports = {
 	},
 
 	plugins: [
-		// new HtmlWebpackPlugin({
-		// 	template: __dirname + "/src/index.html"
-		// })
+		new webpack.optimize.OccurrenceOrderPlugin(),
 		new webpack.HotModuleReplacementPlugin()
 	]
 }

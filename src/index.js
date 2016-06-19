@@ -4,7 +4,7 @@ class App {
 	}
 
 	hello() {
-		console.log(this.name + " say hi");
+		console.log(this.name + " say hi again");
 	}
 }
 
